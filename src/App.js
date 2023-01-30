@@ -12,6 +12,7 @@ function App() {
   return (
     <Router>
       <div className="App">
+        <h1>Goju-Ryu Karate-Do Martial Arts Association (G.K.M.A)</h1>
         <Routes>
           <Route exact path='/gkma-karate-app/' element={<ScreenLayouts />}></Route>
           <Route exact path='/gkma-karate-app/kata' element={< KataScreen />}></Route>

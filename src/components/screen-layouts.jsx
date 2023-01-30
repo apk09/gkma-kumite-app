@@ -6,8 +6,8 @@ import {
 const ScreenLayouts = () => {
   return (
     <>
-      <button><Link to="/kata">Kata</Link></button>
-      <button><Link to="/kumite">Kumite</Link></button>
+      <button><Link to="/gkma-karate-app/kata">Kata</Link></button>
+      <button><Link to="/gkma-karate-app/kumite">Kumite</Link></button>
     </>
   )
 }
