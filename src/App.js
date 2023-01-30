@@ -1,25 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from 'react-router-dom';
+import ScreenLayouts from './components/screen-layouts';
+import KataScreen from './components/kata/kata-screen';
+import KumiteScreen from './components/kumite/kumite-screen';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route exact path='/' element={<ScreenLayouts />}></Route>
+          <Route exact path='/kata' element={< KataScreen />}></Route>
+          <Route exact path='/kumite' element={< KumiteScreen />}></Route>
+        </Routes>
+      </div>
+    </Router>
   );
+  
 }
 
 export default App;
