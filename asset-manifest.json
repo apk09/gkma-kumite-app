@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/gkma-karate-app/static/css/main.073c9b0a.css",
-    "main.js": "/gkma-karate-app/static/js/main.259fa4f7.js",
+    "main.js": "/gkma-karate-app/static/js/main.09ba8fe1.js",
     "static/js/787.8ecc366d.chunk.js": "/gkma-karate-app/static/js/787.8ecc366d.chunk.js",
     "index.html": "/gkma-karate-app/index.html",
     "main.073c9b0a.css.map": "/gkma-karate-app/static/css/main.073c9b0a.css.map",
-    "main.259fa4f7.js.map": "/gkma-karate-app/static/js/main.259fa4f7.js.map",
+    "main.09ba8fe1.js.map": "/gkma-karate-app/static/js/main.09ba8fe1.js.map",
     "787.8ecc366d.chunk.js.map": "/gkma-karate-app/static/js/787.8ecc366d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.259fa4f7.js"
+    "static/js/main.09ba8fe1.js"
   ]
 }
