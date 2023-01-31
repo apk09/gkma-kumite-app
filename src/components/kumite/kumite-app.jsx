@@ -20,7 +20,7 @@ const AoContainer = styled.div`
   width: 50%;
 `;
 
-const KumiteScreen = () => {
+const KumiteApp = () => {
   return (
     <KumiteContainer>
       <AkaContainer>
@@ -33,4 +33,4 @@ const KumiteScreen = () => {
   );
 }
 
-export default KumiteScreen;
+export default KumiteApp;
