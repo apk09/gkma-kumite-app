@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/gkma-karate-app/static/css/main.073c9b0a.css",
-    "main.js": "/gkma-karate-app/static/js/main.13d6e3fd.js",
-    "static/js/787.8ecc366d.chunk.js": "/gkma-karate-app/static/js/787.8ecc366d.chunk.js",
-    "index.html": "/gkma-karate-app/index.html",
-    "main.073c9b0a.css.map": "/gkma-karate-app/static/css/main.073c9b0a.css.map",
-    "main.13d6e3fd.js.map": "/gkma-karate-app/static/js/main.13d6e3fd.js.map",
-    "787.8ecc366d.chunk.js.map": "/gkma-karate-app/static/js/787.8ecc366d.chunk.js.map"
+    "main.css": "/gkma-kumite-app/static/css/main.073c9b0a.css",
+    "main.js": "/gkma-kumite-app/static/js/main.29c17cb0.js",
+    "static/js/787.8ecc366d.chunk.js": "/gkma-kumite-app/static/js/787.8ecc366d.chunk.js",
+    "index.html": "/gkma-kumite-app/index.html",
+    "main.073c9b0a.css.map": "/gkma-kumite-app/static/css/main.073c9b0a.css.map",
+    "main.29c17cb0.js.map": "/gkma-kumite-app/static/js/main.29c17cb0.js.map",
+    "787.8ecc366d.chunk.js.map": "/gkma-kumite-app/static/js/787.8ecc366d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.13d6e3fd.js"
+    "static/js/main.29c17cb0.js"
   ]
 }
