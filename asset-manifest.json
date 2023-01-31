@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/gkma-kumite-app/static/css/main.073c9b0a.css",
-    "main.js": "/gkma-kumite-app/static/js/main.29c17cb0.js",
+    "main.js": "/gkma-kumite-app/static/js/main.a68bb428.js",
     "static/js/787.8ecc366d.chunk.js": "/gkma-kumite-app/static/js/787.8ecc366d.chunk.js",
     "index.html": "/gkma-kumite-app/index.html",
     "main.073c9b0a.css.map": "/gkma-kumite-app/static/css/main.073c9b0a.css.map",
-    "main.29c17cb0.js.map": "/gkma-kumite-app/static/js/main.29c17cb0.js.map",
+    "main.a68bb428.js.map": "/gkma-kumite-app/static/js/main.a68bb428.js.map",
     "787.8ecc366d.chunk.js.map": "/gkma-kumite-app/static/js/787.8ecc366d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.29c17cb0.js"
+    "static/js/main.a68bb428.js"
   ]
 }
