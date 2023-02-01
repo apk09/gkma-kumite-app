@@ -26,7 +26,7 @@ const AoContainer = styled.div`
 
 const KumiteTimerOptionsContainer = styled.div`
   position: absolute;
-  top: 10%;
+  top: 15%;
   left: calc(50% - 175px);
   width: 350px;
   .disabled {
@@ -37,7 +37,7 @@ const KumiteTimerOptionsContainer = styled.div`
 const KumiteTimerContainer = styled.div`
   position: absolute;
   left: calc(50% - 175px);
-  top: calc(10% + 30px);
+  top: calc(15% + 30px);
   background-color: rgba(0,0,0,.5);
   height: 200px;
   width: 350px;
@@ -53,7 +53,7 @@ const KumiteTimerContainer = styled.div`
 const TimerControlButtons = styled.div`
   position: absolute;
   left: calc(50% - 75px);
-  top: calc(10% + 240px);
+  top: calc(15% + 240px);
   width: 150px;
   display: inline-grid;
 `;

@@ -2,18 +2,17 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 
 const AoScreenContainer = styled.div`
-  
+  .senshuSelected {
+    background: #fff;
+    color: #3466ff;
+    border-color: #3466ff;
+  }
 `;
 
 const AoHeaderContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  .senshuSelected {
-    background: #fff;
-    color: #3466ff;
-    border-color: #3466ff;
-  }
 `;
 
 const AoText = styled.h3`
@@ -54,6 +53,8 @@ const SenshuButton = styled.button`
   border-color: #fff;
   border-style: double;
   cursor: pointer;
+  width: 50%;
+  margin-top: 10px;
   &:hover {
     background: #fff;
     color: #3466ff;
@@ -63,7 +64,7 @@ const SenshuButton = styled.button`
 
 const AoScoreText = styled.p`
   color: #fff;
-  font-size: 400px;
+  font-size: 300px;
   font-weight: 700;
   margin: 0;
 `;
@@ -132,9 +133,8 @@ const AoScreen = () => {
       <AoHeaderContainer>
         {!isPlayerName ? 
           <AoText>AO( <AoInputText value={playerName} onChange={(e) => setPlayerName(e.target.value)} type="text" /><AoDoneBtn onClick={() => setIsPlayerName(true)}>Done</AoDoneBtn> )</AoText> : 
-          <AoText>{playerName ? <span>AKA({playerName})</span> : <span>AKA</span>}</AoText>
+          <AoText>{playerName ? <span>AO({playerName})</span> : <span>AO</span>}</AoText>
         }
-        <SenshuButton onClick={() => setIsSenshu(!isSenshu)} className={`${isSenshu ? 'senshuSelected': ''}`}>SENSHU</SenshuButton>
       </AoHeaderContainer>
       <AoScoreText>{aoScore}</AoScoreText>
       <ScoreButtonContainer>
@@ -149,6 +149,7 @@ const AoScreen = () => {
           aoPunishments.map((punishment, index) => <PunishmentButton key={index} onClick={() => handlePunishments(index)} className={`${punishment?.selected ? 'selected' : ''}`}>{punishment?.name}</PunishmentButton>)
         }
       </PunishmentButtonContainer>
+      <SenshuButton onClick={() => setIsSenshu(!isSenshu)} className={`${isSenshu ? 'senshuSelected': ''}`}>SENSHU</SenshuButton>
     </AoScreenContainer>
   );
 }

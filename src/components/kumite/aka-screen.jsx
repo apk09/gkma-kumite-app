@@ -2,18 +2,17 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 
 const AkaScreenContainer = styled.div`
-  
+  .senshuSelected {
+    background: #fff;
+    color: #fe0000;
+    border-color: #fe0000;
+  }
 `;
 
 const AkaHeaderContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  .senshuSelected {
-    background: #fff;
-    color: #fe0000;
-    border-color: #fe0000;
-  }
 `;
 
 const AkaText = styled.h3`
@@ -48,12 +47,13 @@ const AkaDoneBtn = styled.button`
 
 const SenshuButton = styled.button`
   font-size: 20px;
-  margin: 15px 0 0 15px;
   background: #fe0000;
   color: #fff;
   border-color: #fff;
   border-style: double;
   cursor: pointer;
+  width: 50%;
+  margin-top: 10px;
   &:hover {
     background: #fff;
     color: #fe0000;
@@ -63,7 +63,7 @@ const SenshuButton = styled.button`
 
 const AkaScoreText = styled.p`
   color: #fff;
-  font-size: 400px;
+  font-size: 300px;
   font-weight: 700;
   margin: 0;
 `;
@@ -134,7 +134,6 @@ const AkaScreen = () => {
           <AkaText>AKA( <AkaInputText value={playerName} onChange={(e) => setPlayerName(e.target.value)} type="text" /><AkaDoneBtn onClick={() => setIsPlayerName(true)}>Done</AkaDoneBtn> )</AkaText> :
           <AkaText>{playerName ? <span>AKA({playerName})</span> : <span>AKA</span>}</AkaText>
         }
-        <SenshuButton onClick={() => setIsSenshu(!isSenshu)} className={`${isSenshu ? 'senshuSelected': ''}`}>SENSHU</SenshuButton>
       </AkaHeaderContainer>
       <AkaScoreText>{akaScore}</AkaScoreText>
       <ScoreButtonContainer>
@@ -149,6 +148,7 @@ const AkaScreen = () => {
           akaPunishments.map((punishment, index) => <PunishmentButton key={index} onClick={() => handlePunishments(index)} className={`${punishment?.selected ? 'selected' : ''}`}>{punishment?.name}</PunishmentButton>)
         }
       </PunishmentButtonContainer>
+      <SenshuButton onClick={() => setIsSenshu(!isSenshu)} className={`${isSenshu ? 'senshuSelected': ''}`}>SENSHU</SenshuButton>
     </AkaScreenContainer>
   );
 }
