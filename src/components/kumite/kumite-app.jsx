@@ -1,7 +1,6 @@
 import React, { useRef, useState } from 'react';
 import styled from 'styled-components';
 import GkmaFooter from '../shared/gkma-footer';
-import GkmaHeader from '../shared/gkma-header';
 import AkaScreen from './aka-screen';
 import AoScreen from './ao-screen';
 import KumiteTimer from './kumite-timer';
@@ -26,7 +25,7 @@ const AoContainer = styled.div`
 
 const KumiteTimerOptionsContainer = styled.div`
   position: absolute;
-  top: 15%;
+  top: 12%;
   left: calc(50% - 175px);
   width: 350px;
   .disabled {
@@ -37,7 +36,7 @@ const KumiteTimerOptionsContainer = styled.div`
 const KumiteTimerContainer = styled.div`
   position: absolute;
   left: calc(50% - 175px);
-  top: calc(15% + 30px);
+  top: calc(12% + 30px);
   background-color: rgba(0,0,0,.5);
   height: 200px;
   width: 350px;
@@ -53,7 +52,7 @@ const KumiteTimerContainer = styled.div`
 const TimerControlButtons = styled.div`
   position: absolute;
   left: calc(50% - 75px);
-  top: calc(15% + 240px);
+  top: calc(12% + 240px);
   width: 150px;
   display: inline-grid;
 `;
@@ -91,7 +90,7 @@ const YameButton = styled.button`
 
 const ResetButton = styled.button`
   position: absolute;
-  bottom: 7.5%;
+  top: calc(12% + 375px);
   width: 100px;
   height: 50px;
   background-color: #fff;
@@ -122,7 +121,6 @@ const KumiteApp = () => {
 
   return (
     <KumiteContainer>
-      {/* <GkmaHeader /> */}
       <AkaContainer>
         <AkaScreen />
       </AkaContainer>

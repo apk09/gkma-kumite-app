@@ -19,7 +19,7 @@ const AkaText = styled.h3`
   color: #fff;
   font-size: 50px;
   letter-spacing: 5px;
-  margin: 15px 0 0 0;
+  margin: 5px 0 0 0;
 `;
 
 const AkaInputText = styled.input`
@@ -63,8 +63,8 @@ const SenshuButton = styled.button`
 
 const AkaScoreText = styled.p`
   color: #fff;
-  font-size: 300px;
-  font-weight: 700;
+  font-family: sans-serif;
+  font-size: 225px;
   margin: 0;
 `;
 
