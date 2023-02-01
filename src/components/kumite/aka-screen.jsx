@@ -23,6 +23,29 @@ const AkaText = styled.h3`
   margin: 15px 0 0 0;
 `;
 
+const AkaInputText = styled.input`
+  background-color: rgba(0,0,0,.5);
+  color: #fff;
+  border: 1px solid #000;
+  width: 200px;
+  height: 25px;
+  font-size: 20px;
+  margin-right: 10px;
+`;
+
+const AkaDoneBtn = styled.button`
+  background-color: rgba(0,0,0,.5);
+  color: #fff;
+  height: 30px;
+  width: 100px;
+  font-size: 20px;
+  border: 1px solid #000;
+  &:hover {
+    background-color: transparent;
+    color: #fff;
+  }
+`;
+
 const SenshuButton = styled.button`
   font-size: 20px;
   margin: 15px 0 0 15px;
@@ -40,7 +63,7 @@ const SenshuButton = styled.button`
 
 const AkaScoreText = styled.p`
   color: #fff;
-  font-size: 225px;
+  font-size: 400px;
   font-weight: 700;
   margin: 0;
 `;
@@ -94,19 +117,23 @@ const PunishmentButtonContainer = styled.div`
 
 const AkaScreen = () => {
 
-  console.log('aka screen rendered');
+  const [playerName, setPlayerName] = useState('');
+  const [isPlayerName, setIsPlayerName] = useState(false);
   const [isSenshu, setIsSenshu] = useState(false);
   const [akaScore, setAkaScore] = useState(0);
   const [akaPunishments, setAkaPunishments] = useState([{ name: 'C1', selected: false }, { name: 'C2', selected: false }, { name: 'C3', selected: false }, { name: 'HC', selected: false }, { name: 'H', selected: false }]);
 
   const handlePunishments = (index) => {
-    setAkaPunishments(() => akaPunishments.map((punishment, idx) => index === idx ? { ...punishment, selected: !punishment?.selected } : index !== idx && punishment?.selected ? { ...punishment, selected: false } : punishment));
+    setAkaPunishments(() => akaPunishments?.map((punishment, idx) => index >= idx ? { ...punishment, selected: true } : { ...punishment, selected: false }));
   };
 
   return (
     <AkaScreenContainer>
       <AkaHeaderContainer>
-        <AkaText>AKA</AkaText>
+        {!isPlayerName ?
+          <AkaText>AKA( <AkaInputText value={playerName} onChange={(e) => setPlayerName(e.target.value)} type="text" /><AkaDoneBtn onClick={() => setIsPlayerName(true)}>Done</AkaDoneBtn> )</AkaText> :
+          <AkaText>{playerName ? <span>AKA({playerName})</span> : <span>AKA</span>}</AkaText>
+        }
         <SenshuButton onClick={() => setIsSenshu(!isSenshu)} className={`${isSenshu ? 'senshuSelected': ''}`}>SENSHU</SenshuButton>
       </AkaHeaderContainer>
       <AkaScoreText>{akaScore}</AkaScoreText>

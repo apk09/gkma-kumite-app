@@ -1,7 +1,7 @@
 import React from 'react';
 import Countdown from 'react-countdown';
 
-const KumiteTimer = ({ countdownRef }) => {
+const KumiteTimer = ({ countdownRef, timerSelected }) => {
 
   const renderer = (data) => <span>{data.formatted.minutes}:{data.formatted.seconds}</span>;
 
@@ -9,7 +9,7 @@ const KumiteTimer = ({ countdownRef }) => {
     <>
       <Countdown 
         ref={countdownRef}
-        date={Date.now() + 180000} 
+        date={Date.now() + timerSelected*1000} 
         autoStart={false}
         renderer={renderer}
       />
