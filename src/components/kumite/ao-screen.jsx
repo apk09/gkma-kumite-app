@@ -64,7 +64,6 @@ const SenshuButton = styled.button`
 
 const AoScoreText = styled.p`
   color: #fff;
-  font-weight: 700;
   font-family: sans-serif;
   font-size: 225px;
   margin: 0;
